@@ -58,7 +58,7 @@ h2{font-size:2.1rem;color:var(--hijau);margin-bottom:.4rem}
 /* ===== MOTTO: tulisan Arab dan artinya (ubah font-size untuk memperbesar/memperkecil) ===== */
 .motto-arab{font-family:var(--font-judul);font-size:2.2rem;font-weight:700;color:var(--emas);line-height:1.7;text-align:center;margin:10px 0 4px}
 .motto-arti{font-size:1.1rem;font-style:italic;text-align:center;color:#e5eee7}
-.hero .motto-arab{font-size:2rem;line-height:1.5;max-width:none;margin:22px 0 2px;padding:0;border:0;text-align:left;background:linear-gradient(90deg,#f6e27a 0%,var(--emas) 45%,#b8860b 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
+.hero .motto-arab{font-size:2rem;max-width:none;margin:22px 0 2px;padding:0;border:0;text-align:left;background:linear-gradient(90deg,#f6e27a 0%,var(--emas) 45%,#b8860b 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
 .hero .motto-arti{font-size:1.05rem;font-weight:600;font-style:italic;text-align:left;color:#dbe7de;max-width:48ch;margin:0 0 14px;padding:0}
 .hero .motto-arti::after{content:"";display:block;width:140px;height:2px;margin-top:14px;background:linear-gradient(90deg,var(--emas),transparent)}
 
@@ -88,6 +88,10 @@ th,td{padding:10px 14px;text-align:left;border-bottom:1px solid #dde6df}
 th{background:var(--hijau);color:var(--putih)}
 td:first-child{white-space:nowrap;font-weight:700;color:var(--hijau)}
 tr:nth-child(even) td{background:#f6faf7}
+
+.sub-jadwal{font-family:var(--font-judul);color:var(--hijau-tua);margin:28px 0 10px;font-size:1.3rem}
+.tabel-agenda td:first-child{white-space:normal}
+.tabel-agenda td:last-child{font-weight:400;color:inherit}
 
 /* ===== FASILITAS ===== */
 .fasilitas{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:14px;list-style:none}
@@ -254,39 +258,68 @@ footer{background:var(--hitam);color:#b5c0b8;padding:28px 0;text-align:center;fo
   </div>
 </section>
 
-<!-- ===== JADWAL HARIAN: tambah/ubah kegiatan = ubah baris <tr> ===== -->
+<!-- ===== ALOKASI WAKTU KEGIATAN SANTRI 2026-2027: tambah/ubah kegiatan = ubah baris <tr> ===== -->
 <section class="bagian abu" id="jadwal">
   <div class="wadah">
-    <h2>Jadwal Kegiatan Harian Santri</h2>
-    <p class="pengantar">Santri belajar dan beribadah sepanjang hari, dari tahajud hingga belajar bersama di malam hari.</p>
+    <h2>Alokasi Waktu Kegiatan Santri</h2>
+    <p class="pengantar">Santri belajar dan beribadah sepanjang hari, dari tahajud hingga istirahat malam, ditambah kegiatan mingguan, bulanan, dan tahunan.</p>
+    <h3 class="sub-jadwal">Kegiatan Harian</h3>
     <div class="tabel-bungkus">
     <table>
       <thead><tr><th>Waktu</th><th>Kegiatan</th></tr></thead>
       <tbody>
-        <tr><td>03.30 – 04.00</td><td>Sholat Tahajud</td></tr>
-        <tr><td>04.00 – 05.00</td><td>Jama’ah Shubuh</td></tr>
-        <tr><td>05.00 – 05.30</td><td>Tartil Al-Qur’an</td></tr>
-        <tr><td>05.30 – 06.30</td><td>Mandi dan makan pagi</td></tr>
-        <tr><td>06.30 – 06.45</td><td>Apel pagi di halaman sekolah</td></tr>
-        <tr><td>06.45 – 07.15</td><td>Sholat Dhuha berjamaah</td></tr>
-        <tr><td>07.15 – 08.00</td><td>Madrasah Diniyah sekolah formal</td></tr>
-        <tr><td>08.00 – 10.00</td><td>KBM</td></tr>
-        <tr><td>10.00 – 10.30</td><td>Istirahat</td></tr>
-        <tr><td>10.30 – 12.45</td><td>KBM</td></tr>
-        <tr><td>12.45 – 13.00</td><td>Jama’ah Sholat Dhuhur</td></tr>
-        <tr><td>13.00 – 13.30</td><td>Makan siang</td></tr>
-        <tr><td>13.30 – 14.30</td><td>Bimbel mapel UN</td></tr>
-        <tr><td>14.30 – 15.00</td><td>Tidur siang (qailulah)</td></tr>
-        <tr><td>15.00 – 15.30</td><td>Jama’ah Sholat Ashar, pembacaan Rotibul Athos</td></tr>
-        <tr><td>15.30 – 16.45</td><td>Mengaji Al-Qur’an, ekstrakurikuler (bagi yang berminat)</td></tr>
-        <tr><td>16.45 – 17.00</td><td>Mandi</td></tr>
-        <tr><td>17.00 – 17.30</td><td>Muhafadzoh Nadhom Imrithi</td></tr>
-        <tr><td>17.30 – 18.30</td><td>Jama’ah Maghrib, Rotibul Haddad dan Surat Al-Waqi’ah</td></tr>
-        <tr><td>18.30 – 20.00</td><td>Madrasah Diniyah Wustho, Jama’ah Sholat Isya’</td></tr>
-        <tr><td>20.00 – 20.30</td><td>Makan malam</td></tr>
-        <tr><td>20.30 – 21.00</td><td>Drill Bahasa Arab dan Bahasa Inggris</td></tr>
-        <tr><td>21.00 – 22.00</td><td>Belajar bersama</td></tr>
-        <tr><td>22.00 – 03.30</td><td>Tidur malam</td></tr>
+        <tr><td>03.30 – 04.00</td><td>Tahajud</td></tr>
+        <tr><td>04.00 – 05.00</td><td>Jama’ah Subuh, membaca wirdullathif dan yasin</td></tr>
+        <tr><td>05.00 – 05.30</td><td>Ngaji Al-Qur’an</td></tr>
+        <tr><td>05.00 – 05.30</td><td>Makan pagi, Mandi dan Persiapan Sekolah</td></tr>
+        <tr><td>06.30 – 06.45</td><td>Sholat Dhuha</td></tr>
+        <tr><td>06.45 – 07.10</td><td>Berangkat Sekolah dan Apel Pagi</td></tr>
+        <tr><td>07.10 – 13.30</td><td>KBM Sekolah</td></tr>
+        <tr><td>13.30 – 13.45</td><td>Jama’ah Dhuhur</td></tr>
+        <tr><td>13.45 – 15.15</td><td>Makan siang dan Istirahat</td></tr>
+        <tr><td>15.30 – 16.00</td><td>Jama’ah Ashar dan Membaca al waqi’ah</td></tr>
+        <tr><td>16.00 – 16.50</td><td>Ngaji Am</td></tr>
+        <tr><td>17.00 – 17.15</td><td>Muhafadhoh Imrithy/Amsilati</td></tr>
+        <tr><td>17.15 – 17.30</td><td>Mandi dan Persiapan Jama’ah Maghrib</td></tr>
+        <tr><td>17.30 – 18.00</td><td>Jama’ah Maghrib dan Membaca Rothibul Hadad</td></tr>
+        <tr><td>18.00 – 18.30</td><td>Makan Malam dan Persiapan Diniyah</td></tr>
+        <tr><td>18.30 – 19.50</td><td>Ngaji Diniyah</td></tr>
+        <tr><td>19.50 – 20.10</td><td>Jama’ah Isya’ dan Drill Bahasa</td></tr>
+        <tr><td>20.10 – 21.00</td><td>Setoran hafalan</td></tr>
+        <tr><td>21.00 – 22.30</td><td>Istirahat Tidur Malam</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <h3 class="sub-jadwal">Kegiatan Mingguan</h3>
+    <div class="tabel-bungkus">
+    <table class="tabel-agenda">
+      <thead><tr><th>Kegiatan</th><th>Pelaksanaan</th></tr></thead>
+      <tbody>
+        <tr><td>Pembacaan Burdah</td><td>Setiap Hari Senin Malam Selasa</td></tr>
+        <tr><td>Pembacaan Diba’</td><td>Setiap Hari Kamis Malam Jum’at</td></tr>
+        <tr><td>Mukhadhoroh</td><td>Setiap Hari Senin Malam Selasa</td></tr>
+        <tr><td>Muhadasah dan Roan</td><td>Hari Jum’at Pagi</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <h3 class="sub-jadwal">Kegiatan Bulanan</h3>
+    <div class="tabel-bungkus">
+    <table class="tabel-agenda">
+      <thead><tr><th>Kegiatan</th><th>Pelaksanaan</th></tr></thead>
+      <tbody>
+        <tr><td>Muhadhoroh Kubro</td><td>Setiap Akhir Semester</td></tr>
+        <tr><td>Pembacaan Maulid Habsyi</td><td>Setiap Malam Jum’at Legi</td></tr>
+        <tr><td>Ziarah Makam Masayikh Siman</td><td>Setiap Akhir Bulan</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <h3 class="sub-jadwal">Kegiatan Tahunan</h3>
+    <div class="tabel-bungkus">
+    <table class="tabel-agenda">
+      <thead><tr><th>Kegiatan</th><th>Pelaksanaan</th></tr></thead>
+      <tbody>
+        <tr><td>Gebyar Festival Maulid</td><td>Setiap Bulan Maulid</td></tr>
+        <tr><td>Haflah Akhiri Sanah</td><td>Setiap Akhir Tahun Ajaran</td></tr>
       </tbody>
     </table>
     </div>
@@ -333,11 +366,11 @@ footer{background:var(--hitam);color:#b5c0b8;padding:28px 0;text-align:center;fo
   <div class="wadah dua-kolom">
     <div>
       <h2>Pendaftaran Santri Baru</h2>
-      <p>Pendidikan formal yang ada di Pondok Pesantren Al-Fattah Al-Ausath yaitu: SMP Unggulan Simanjaya, SMAU BPPT Al-Fattah, dan SMA 1 Simanjaya.</p>
-      <p class="catatan">Calon santri baru dapat mendaftar melalui whatsapp di bawah ini sekaligus memenuhi persyaratan yang dibutuhkan.</p>
+      <p>TPendidikan formal yang ada di Pondok Pesantren Al-Fattah Al-Ausath yaitu: SMP Unggulan Simanjaya, SMAU BPPT Al-Fattah, dan SMA 1 Simanjaya.</p>
+      <p class="catatan">Calon santri baru dapat mendaftar melalui email di bawah ini sekaligus memenuhi persyaratan yang dibutuhkan.</p>
       <br>
-      <!-- EDIT DI SINI: ganti 6287755750127 dengan nomor WhatsApp (format 62, tanpa 0 di depan) -->
-      <a class="tombol-utama" href="https://wa.me/6287755750127?text=Assalamu%27alaikum%2C%20saya%20ingin%20mendaftar%20santri%20baru" target="_blank" rel="noopener">Daftar via WhatsApp</a>
+      <!-- EDIT DI SINI: ganti alamat email tujuan pendaftaran -->
+      <a class="tombol-utama" href="mailto:alfattahalausath@gmail.com?subject=Pendaftaran%20Santri%20Baru&body=Assalamu%27alaikum%2C%20saya%20ingin%20mendaftar%20santri%20baru.">Daftar via Email</a>
     </div>
     <div>
       <h3 style="color:var(--emas)">Syarat pendaftaran</h3>
@@ -360,7 +393,7 @@ footer{background:var(--hitam);color:#b5c0b8;padding:28px 0;text-align:center;fo
       <p><strong>Alamat</strong><br>Jl. Ponpes. Al Fattah, Desa Siman, Kecamatan Sekaran, Kabupaten Lamongan</p>
       <!-- EDIT DI SINI: nomor dan email -->
       <p style="margin-top:12px"><strong>WhatsApp</strong><br><a href="https://wa.me/6287755750127" target="_blank" rel="noopener">0877-5575-0127</a></p>
-      <p style="margin-top:12px"><strong>Email</strong><br>alfattahalausath@gmail.com</p>
+      <p style="margin-top:12px"><strong>Email</strong><br><a href="mailto:alfattahalausath@gmail.com">alfattahalausath@gmail.com</a></p>
       <h3 style="margin-top:20px;color:var(--hijau)">Ikuti kami</h3>
       <div style="margin-top:-12px"><div class="sosmed sosmed-terang">
         <!-- EDIT DI SINI: ganti alamat link (href) dan nama akun jika perlu -->
@@ -374,7 +407,7 @@ footer{background:var(--hitam);color:#b5c0b8;padding:28px 0;text-align:center;fo
     <form id="formKontak">
       <input type="text" id="nama" placeholder="Nama Anda" required>
       <textarea id="pesan" rows="4" placeholder="Pesan Anda" required></textarea>
-      <button class="kirim" type="submit">Kirim lewat WhatsApp</button>
+      <button class="kirim" type="submit">Kirim lewat Email</button>
     </form>
   </div>
 </section>
@@ -392,12 +425,13 @@ var menu = document.getElementById('menu');
 document.getElementById('tombolMenu').addEventListener('click', function(){ menu.classList.toggle('buka'); });
 menu.addEventListener('click', function(){ menu.classList.remove('buka'); });
 
-/* Form kontak: pesan dikirim ke WhatsApp. EDIT DI SINI: ganti nomor tujuan */
-var NOMOR_WA = '6287755750127';
+/* Form kontak: pesan dikirim lewat email. EDIT DI SINI: ganti email tujuan */
+var EMAIL_TUJUAN = 'alfattahalausath@gmail.com';
 document.getElementById('formKontak').addEventListener('submit', function(e){
   e.preventDefault();
-  var teks = 'Assalamu\'alaikum, saya ' + document.getElementById('nama').value + '. ' + document.getElementById('pesan').value;
-  window.open('https://wa.me/' + NOMOR_WA + '?text=' + encodeURIComponent(teks), '_blank');
+  var nama = document.getElementById('nama').value;
+  var teks = 'Assalamu\'alaikum, saya ' + nama + '.\n\n' + document.getElementById('pesan').value;
+  window.location.href = 'mailto:' + EMAIL_TUJUAN + '?subject=' + encodeURIComponent('Pesan dari ' + nama) + '&body=' + encodeURIComponent(teks);
 });
 </script>
 </body>
